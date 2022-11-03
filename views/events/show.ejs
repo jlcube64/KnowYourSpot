@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs')%>
+
+<div class = "center">
+    <h4><%=event.name%></h4>
+    <small>Start Time: <%=event.startTime%><br> End Time: <%=event.endTime%></small>
+    <br>
+    <small>Date: <%=event.date%></small>
+    <br>
+    <p>Hosted by <%=event.hostName%></p>
+    <div id="event"><%= event.topic %></div>
+    <form>
+        <button type = "submit" formmethod="GET" formaction="/events/<%= event.id%>/edit">Edit</button>
+        <button type = "submit" formmethod="POST" formaction="/events/<%= event.id%>?_method=DELETE">Delete</button>
+    </form>
+</div>
+
+
+
+
+<%- include('../partials/footer.ejs')%>

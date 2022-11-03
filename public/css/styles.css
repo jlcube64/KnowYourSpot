@@ -1,0 +1,81 @@
+.button {
+    display: block;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+  overflow: hidden;
+  padding-left: 20px;
+  background-image: url("/images/dapper.png") ;
+  color: white;
+  width: 100%;
+}
+
+
+nav a{
+  float: left;
+  display: block;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: white;  
+  padding: 0.25em 1em;
+  background-color: #EBF5FF; /* pale bluish white */
+  color: #4312AE; /* dark blue */
+  border: 2px solid black;
+  border-top-left-radius: 1em 1em; /* rounded corner! */
+  border-top-right-radius: 1em 1em; /* another rounded corner! */
+
+ }
+
+nav a:hover{
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
+footer{
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#image{
+    display: block;
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+#center1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    text-align: center;
+  }
+  #center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    text-align: center;
+  }

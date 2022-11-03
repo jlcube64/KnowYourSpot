@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs')%>
+<div class = "center">
+    <form method = "POST" action="/events/<%= event.id%>?_method=PUT">
+        <table>
+            <tr>
+                <td><label for="name" >Name</label></td>
+                <td><input type="text" id="name" name="name" value = "<%= event.name%>" class = "fixed-width"></td>
+            </tr>
+            <tr><td class = "align-top"><label for="topic">Topic</label></td>
+                <td><textarea rows="5" id="topic" name="topic" class = "fixed-width"><%= event.topic%></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Submit</button></td>
+            </tr>
+            </table>        
+    </form>
+
+    </div>
+<%- include('../partials/footer.ejs')%>

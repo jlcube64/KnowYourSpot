@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs')%>
+
+<div class = "center">
+    
+    <% if (events.length){%>
+        <p>Select an Event to attend</p>
+        <%events.forEach(event =>{ %>
+            <h2><%=event.category%></h2>
+            <a href="/events/<%=event.id%>"><p> <%=event.name %>  </p> </a>
+          
+    <% });
+    }else{ %>
+        <p>There are no stories to display.</p>
+        <% }  %>
+</div>
+
+
+<%- include('../partials/footer.ejs')%>
