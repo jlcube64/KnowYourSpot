@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs')%>
+    <h2 class="center">Interactive Homicide Map View</h2>
+    <p class="center">Scroll through our interactive map and click on each Datapoint to view more information on the homicide!</p>
+
+    <div id='map' style='width: 1920px; height: 720px;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWNsb3Zpbjc3NzciLCJhIjoiY2xhZnJlZ25nMTc0YTNycGVhdWN0MWR4ayJ9.BuP5paKDMChniEOHcjDsyw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mclovin7777/claft7ozo003m14nyc8wso04v',
+            center: [-80.8431, 35.2271],
+            zoom: 12
+        });
+
+        map.on('click', (event) => {
+            const features = map.queryRenderedFeatures(event.point, {
+                layers: ['cmpd-homicide']
+            });
+            if (!features.length) {
+                return;
+            }
+            const feature = features[0];
+
+            const popup = new mapboxgl.Popup({ offset: [0, -15] })
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML(
+                    `<h3> Weapon Used:  ${feature.properties.WEAPON}</h3><p>  Date Reported: ${feature.properties.DATE_REPORTED} <br> Reason for Crime: ${feature.properties.CIRCUMSTANCES} <br>
+                        Location: ${feature.properties.LOCATION} <br> Gender: ${feature.properties.GENDER} <br>Race: ${feature.properties.RACE_ETHNICITY} <br>Age: ${feature.properties.AGE}   </p>`
+                )
+                .addTo(map);
+        });
+
+    </script>
+
+
+    <%- include('../partials/footer.ejs')%>
