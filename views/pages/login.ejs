@@ -1,17 +1,35 @@
 <%- include('../partials/header.ejs')%>
-<h1 class="center"> Know Your Spot Login</h1>   
+
+<style>
+    #rcorners1 {
+        border-radius: 50px / 15px;
+        background: #b9b9b9;
+        padding: 20px; 
+        width: 500px;
+        height: 350px; 
+    }
+</style>
+
+<h1 class="center"> Know Your Spot Login</h1>  
+    <br>
+    <br>
+    <br>
     <form>  
-        <div class="container">   
+        <div id = "rcorners1" class="center" class="container">   
+            <br>
             <label>Username : </label>   
-            <input type="text" placeholder="Enter Username" name="username" required>  
+            <input type="text" placeholder="Enter Username" name="username" size="50" required><br/>
+            <br>
             <label>Password : </label>   
-            <input type="password" placeholder="Enter Password" name="password" required>  
+            <input type="password" placeholder="Enter Password" name="password" size="50" required><br/>
+            <br>
             <button type="submit">Login</button>   
-            <input type="checkbox" checked="checked"> Remember me   
-            <button type="button" class="cancelbtn"> Cancel</button>   
+            <button type="button" class="cancelbtn"> Cancel</button> <br/>
+            <input type="checkbox" checked="checked"> Remember me <br/>
+              
             Forgot <a href="#"> password? </a>   
         </div>   
-    </form>     
+    </form>
 
 
 <%- include('../partials/footer.ejs')%>
