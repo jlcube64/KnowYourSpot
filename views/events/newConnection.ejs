@@ -1,26 +1,38 @@
 <%- include('../partials/header.ejs')%>
 
-<div class = "center">
+<style>
+    #rcorners1 {
+        border-radius: 50px / 15px;
+        background: #b9b9b9;
+        padding: 20px; 
+        width: 500px;
+        height: 425px; 
+    }
+</style> 
+
+
+
+<div id = "rcorners1" class = "center">
     <form action = '/events' method = 'POST'>
-        <table>
+        <table class = "center">
             <tr>
-                <td><label for="author">Name</label></td>
+                <td><label for="author"><b>Name</b></label></td>
                 <td><input type="text" id="name" name="name" class = "fixed-width"></td>
             </tr>
             <tr>
-                <td><label for="title">Host Name</label></td>
+                <td><label for="title"><b>Host Name</b></label></td>
                 <td><input type="text" id="hostName" name="hostName" class = "fixed-width"></td>
             </tr>
             <tr>
-                <td class = "align-top"><label for="content">Topic</label></td>
+                <td class = "align-top"><label for="content"><b>Topic</b></label></td>
                 <td><textarea rows="5" id="topic" name="topic" class = "fixed-width"></textarea></td>
             </tr>
             <tr>
-                <td class = "align-top"><label for="content">Category</label></td>
+                <td class = "align-top"><label for="content"><b>Category</b></label></td>
                 <td><textarea rows="5" id="category" name="category" class = "fixed-width"></textarea></td>
             </tr>
             <tr>
-                <td colspan="2" class = "align-right"><button>Submit</button></td>
+                <td colspan="2" class = "align-right"><button><b>Submit</b></button></td>
             </tr>
         </table>        
     </form>
