@@ -1,12 +1,23 @@
 <%- include('../partials/header.ejs')%>
 
+<style>
+    #rcorners1 {
+        border-radius: 50px / 15px;
+        background: #b9b9b9;
+        padding: 20px; 
+        width: 350px;
+        height: 100px; 
+    }
+</style>
+
 <div class = "center">
     
     <% if (events.length){%>
-        <p>Select an Event to attend</p>
+        <h1>Select an Event to attend</h1>
+        <p></p>
         <%events.forEach(event =>{ %>
             <h2><%=event.category%></h2>
-            <a href="/events/<%=event.id%>"><p> <%=event.name %>  </p> </a>
+            <a href="/events/<%=event.id%>"><h4 id = "rcorners1" class = "center"> <%=event.name %>  </h4> </a>
           
     <% });
     }else{ %>
